@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Home</title>
+	</head>
+	<body>
+		<h3>Posts</h3>
+		{% for i in range(posts|length) %}
+			<p>{{posts[i]|safe}}</p>
+		{% endfor %}
+		{% if posts|length==0 %}No Posts were found{% endif %}
+		<form action='/post' method='post'>
+			<input type='text' name='postString' />
+			<input type='submit'/>
+		</form>
+		<form action='/logout'>
+			<input type='submit' value='logout'/>
+		</form>
+	</body>
+</html>

